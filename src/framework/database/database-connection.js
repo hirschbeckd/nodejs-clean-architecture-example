@@ -19,8 +19,6 @@ export class DatabaseConnection {
     }
 
     onConnect(callback) {
-        connection.once("open", function () {
-            callback();
-        });
+        connection.once("open", callback);
     }
 }

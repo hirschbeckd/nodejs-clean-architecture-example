@@ -19,6 +19,8 @@ app.use(cookieParser());
 createMongoDBConnection.onConnect(() => {
     setUpRouting(app, new WhatRoute());
     setUpRouting(app, new UsersRoute());
+
+    console.log('Express Routes are set up...')
 });
 
 module.exports = app;

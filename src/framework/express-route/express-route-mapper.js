@@ -1,4 +1,4 @@
 
 export function setUpRouting(app, route) {
-    route.mapRoute(app);
+    route.mapRoutes(app);
 }

@@ -16,12 +16,9 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
-const whatRoute = new WhatRoute();
-const usersRoute = new UsersRoute();
-
 createMongoDBConnection.onConnect(() => {
-    setUpRouting(app, whatRoute);
-    setUpRouting(app, usersRoute);
+    setUpRouting(app, new WhatRoute());
+    setUpRouting(app, new UsersRoute());
 });
 
 module.exports = app;

@@ -13,9 +13,7 @@ export class DatabaseConnection {
 
         const db = connection;
         db.on("error", console.error.bind(console, "DatabaseConnection: connection error: "));
-        db.once("open", function () {
-            console.log("DatabaseConnection: Connected successfully");
-        });
+        db.once("open", () => console.log("DatabaseConnection: Connected successfully"));
     }
 
     onConnect(callback) {

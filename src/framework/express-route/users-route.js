@@ -7,7 +7,7 @@ export class UsersRoute extends AbstractRoute {
         super();
     }
 
-    mapRoute(app) {
+    mapRoutes(app) {
         app.get('/users', async (req, res) => res.json(await userController.listUsers()));
         app.post('/users/:user', async (req, res) => res.json(await userController.addUser(req.params.user)));
     }

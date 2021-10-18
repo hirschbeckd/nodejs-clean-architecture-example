@@ -1,5 +1,5 @@
 export class AbstractRoute {
 
-    mapRoute(req, res) {
+    mapRoutes(req, res) {
     }
 }

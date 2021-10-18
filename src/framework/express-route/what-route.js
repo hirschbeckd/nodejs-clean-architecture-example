@@ -7,7 +7,7 @@ export class WhatRoute extends AbstractRoute {
         super();
     }
 
-    mapRoute(app) {
+    mapRoutes(app) {
         app.get('/what', async (req, res) => res.json(await whatController.getWhat()));
     }
 }

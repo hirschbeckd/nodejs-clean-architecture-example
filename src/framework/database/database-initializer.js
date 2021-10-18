@@ -7,4 +7,4 @@ export class DatabaseInitializer {
     }
 }
 
-export const createMongoDBConnection = new DatabaseInitializer().connectToDatabase();
+export const databaseInitializer = new DatabaseInitializer();

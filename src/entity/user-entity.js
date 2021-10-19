@@ -7,4 +7,6 @@ const UserSchema = new Schema({
     }
 });
 
-export const UserEntity = model("User", UserSchema);
+const CollectionName = 'User';
+
+export const UserEntity = model(CollectionName, UserSchema, CollectionName);

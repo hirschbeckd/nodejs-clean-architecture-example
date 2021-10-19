@@ -11,7 +11,7 @@ export class UserRepository {
     }
 
     async save(user) {
-        await UserEntity.create({name: user});
+        await this.UserEntity.create({name: user});
     }
 }
 
